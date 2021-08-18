@@ -48,7 +48,6 @@ defmodule Sandbox.MixProject do
       {:plug_cowboy, "~> 2.0"},
       {:recase, "~> 0.7.0"},
       {:jose, "~> 1.11.2"},
-      {:faker, "~> 0.16"},
 
       # Development dialyzer
       {:dialyxir, "~> 1.1.0", only: [:dev, :test], runtime: false}
