@@ -23,9 +23,9 @@ Access to the Sandbox API is done via the `Authentication` header in the request
 - `<test_token>` username is the access Token in format `test_<TOKEN>`
 - `<password>` is an empty string
 
-The `<TOKEN>` string is a base64 encoded binary of a `%Sandbox.Token{}` struct that is encrypted with a salt. The `%Sandbox.Token{}` struct holds the PRNG seed state, its `state` key.
+The `<TOKEN>` string is a base64 encoded binary of a [`%Sandbox.Token{}`](https://github.com/mpotra/teller_sandbox/blob/main/lib/sandbox/token.ex) struct that is encrypted with a salt. The [`%Sandbox.Token{}`](https://github.com/mpotra/teller_sandbox/blob/main/lib/sandbox/token.ex) struct holds the PRNG seed state, its `state` key.
 
-Default salt for encrypting the token is `"my secret token"`, set up in the `:sandbox` application configuration under `:token_secret` key.
+Default salt for encrypting the token is `"my secret token"`, set up in the `:sandbox` application configuration [under `:token_secret` key](https://github.com/mpotra/teller_sandbox/blob/main/config/config.exs#L11).
 
 #### Generating a new token
 
