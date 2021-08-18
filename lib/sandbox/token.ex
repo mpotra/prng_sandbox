@@ -11,12 +11,16 @@ defmodule Sandbox.Token do
           state: {:exsss, maybe_improper_list(number(), number())}
         }
 
-  @spec gen_new() :: binary()
-  def gen_new() do
+  @spec new() :: t()
+  def new() do
     %__MODULE__{
       state: Sandbox.Util.get_state()
     }
-    |> encrypt()
+  end
+
+  @spec gen_new() :: binary()
+  def gen_new() do
+    encrypt(new())
   end
 
   @spec parse(list(String.t())) :: {:error, :invalid_token} | {:ok, struct}
