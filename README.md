@@ -73,6 +73,13 @@ The `/accounts/:account_id/transactions` endpoint supports the following query p
 - `count=<N::integer>` - the number of entries to return. Must be a non negative integer.
 - `from_id=<TransactionID::string>` - return transactions older than given `TransactionID`
 
+### Tests
+
+```
+mix dialyzer
+mix test
+```
+
 ### Data store
 
 The random data generator uses JSON files stores in `./data` directory, as a source for Merchant names, Account names, Institution names and Merchant categories; as opposed to hardcoding the values.
