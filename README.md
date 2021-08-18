@@ -2,6 +2,20 @@
 
 Teller Test API application, using pseudo-random number generator (PRNG) to generate pseudo-random data based on https://teller.io/docs/api/2020-10-12
 
+### Table of contents
+
+- [Sandbox](#sandbox)
+  - [Application components](#application-components)
+  - [How does the generator work](#how-does-the-generator-work)
+    - [Generating the access Token](#generating-the-access-token)
+      - [Generating a new token](#generating-a-new-token)
+      - [Generating Transactions by date](#generating-transactions-by-date)
+  - [Installing and starting the application](#installing-and-starting-the-application)
+    - [Accessing the Sandbox API server](#accessing-the-sandbox-api-server)
+    - [Tests](#tests)
+    - [Data store](#data-store)
+    - [The Phoenix server](#the-phoenix-server)
+
 ## Application components
 
 The application is composed of 3 main parts:
